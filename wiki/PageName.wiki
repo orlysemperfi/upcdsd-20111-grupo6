@@ -11,7 +11,7 @@ Servicios Asociados a Nodos
 
 * Nodo 1: Ventas*
 
-- A Consulta Clientes
+- Consulta Clientes
 
 - Consulta ruta x horario
 
