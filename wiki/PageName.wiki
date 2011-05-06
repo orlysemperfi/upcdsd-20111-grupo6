@@ -9,7 +9,7 @@ Add your content here.
 
 Servicios Asociados a Nodos
 
-*bold* Nodo 1: Ventas*bold*<br>
+*bold* Nodo 1: Ventas*bold*
 Consulta Clientes
 Consulta ruta x horario
 Consulta asientos disponibles x Bus
