@@ -9,18 +9,21 @@ Add your content here.
 
 Servicios Asociados a Nodos
 
-*bold* Nodo 1: Ventas*bold*
+* Nodo 1: Ventas*
+
 Consulta Clientes
 Consulta ruta x horario
 Consulta asientos disponibles x Bus
 Registro Pasaje
 
 
-*bold*Nodo 2: Rutas*bold*
+*Nodo 2: Rutas*
+
 Consulta Rutas x Bus Disponible
 Consulta Personal Disponible
 
-*bold*Nodo 3: Clientes*bold*
+*Nodo 3: Clientes*
+
 Consulta Clientes X DNI
 Consulta Puntos X Clientes
 Registro Clientes
