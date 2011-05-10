@@ -22,9 +22,30 @@ Servicios Asociados a Nodos
 
 *Nodo 2: Rutas*
 
-- Consulta Rutas x Bus Disponible
+*Servicio Consulta Rutas x Bus Disponible*
 
-- Consulta Personal Disponible
+Descripción: Se requiere la información de los buses disponibles los cuales serán usados en la ruta.
+
+
+  Operación:Consulta Rutas x Bus Disponible
+
+  Valores de Retorno: Listado de Buses 
+
+  Parametros: Placa
+
+
+*Servicio Consulta Personal Disponible*
+
+Descripción: Se  requiere asignar al personal disponible para la ruta.
+
+
+  Operación: Consulta Personal Disponible
+
+  Valores de Retorno: Listado de Personal
+
+  Parametros: DNI, Apellido
+
+
 
 *Nodo 3: Clientes*
 
