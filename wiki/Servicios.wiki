@@ -28,11 +28,17 @@ Servicios Asociados a Nodos
 
 *Nodo 3: Clientes*
 
-- Consulta Clientes X DNI
+  Descripcion: Este servicio permitira visualizar los clientes que se tienen ingresados en el sistema 
 
-  Descripcion: Este servicio permitira visualizar los clientes que se  
+  Operacion: Consulta Clientes X DNI
 
-                                   tienen ingresados en el sistema 
+
+  Valores de Retorno: List objetos Cliente
+
+
+  Parametros: Nombre Cliente, DNI
+
+ 
 
 - Consulta Puntos X Clientes
 
