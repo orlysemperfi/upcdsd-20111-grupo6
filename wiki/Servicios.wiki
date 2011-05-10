@@ -27,8 +27,12 @@ Servicios Asociados a Nodos
 - Consulta Personal Disponible
 
 *Nodo 3: Clientes*
-Descripcion: 
+
 - Consulta Clientes X DNI
+
+  Descripcion: Este servicio permitira visualizar los clientes que se  
+
+                                   tienen ingresados en el sistema 
 
 - Consulta Puntos X Clientes
 
