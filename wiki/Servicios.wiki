@@ -28,7 +28,12 @@ Servicios Asociados a Nodos
 
 *Nodo 3: Clientes*
 
-  Descripcion: Este servicio permitira visualizar los clientes que se tienen ingresados en el sistema 
+*Servicio Busqueda Clientes*
+
+
+Descripcion: Este servicio permitira visualizar los clientes que se tienen ingresados en el sistema y sus puntos acumulados. Por cada viaje que el cliente realiza se el asigna 1 punto. 
+
+
 
   Operacion: Consulta Clientes X DNI
 
@@ -39,7 +44,30 @@ Servicios Asociados a Nodos
   Parametros: Nombre Cliente, DNI
 
  
+*Servicio Promociones*
 
-- Consulta Puntos X Clientes
 
-- Registro Clientes
+Descripcion: Este servicio permitira visualizar las rutas que cada persona tiene, de acuerdo a la cantidad de puntos que dispone.
+
+
+  Operacion: Consulta Rutas X Puntos
+
+
+  Valores de Retorno: List objetos Rutas
+
+
+  Parametros: Nombre Cliente, DNI
+
+
+*Servicio Registro Clientes*
+
+Descripcion: Este servicio permitira registrar clientes en el sistema. 
+
+
+  Operacion: Registrar Clientes
+
+
+  Valores de Retorno: Cliente
+
+
+  Parametros: Nombre Cliente, DNI , fecha Nacimiento,edad,direccion.
