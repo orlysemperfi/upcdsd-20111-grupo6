@@ -15,34 +15,40 @@ Servicios Asociados a Nodos
 
 *Descripción:* Este método consiste si el cliente está registrado  en la base de datos, si en caso no se encuentra registrado se pasa al registro.
 
- *Parámetros:* dni
 
- *Valor de Retorno:* lis objeto existe
+*Parámetros:* dni
+
+*Valor de Retorno:* lis objeto existe
+
 
 *Método: Consulta ruta x horario*
 
 *Descripción:* Para poder determinar si una ruta pre terminada existe pasaje disponible con la ruta, fecha y hora especificada.
 
- *Parámetros:* destino, fecha,hora
 
- *Valor de retorno:* list objeto ruta
+*Parámetros:* destino, fecha,hora
+
+*Valor de retorno:* list objeto ruta
+
 
 *Método: Consulta asientos disponibles x Bus*
 
 *Descripción:* Permite encontrar si existe asiento disponible
 
- *Parámetros:* lugar, hora, fecha
 
- *Valor de retorno:* list objeto asiento
+*Parámetros:* lugar, hora, fecha
+
+*Valor de retorno:* list objeto asiento
 
 
 *Método: Registro Pasaje*
 
 *Descripción:* Esta método registra el pasaje con las descripciones del cliente cuando se hayan encontrado ruta y asiento disponibles
 
- *Parámetros:* dni, apellidos, nombres
 
- *Valor de retorno:* codigo de pasaje
+*Parámetros:* dni, apellidos, nombres
+
+*Valor de retorno:* codigo de pasaje
 
 
 *Nodo 2: Rutas*
