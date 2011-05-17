@@ -2,6 +2,7 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd                                                  http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
-	<jaxws:client id="cliente" serviceClass="pe.edu.upc.dsd.ws.Cliente"
-		address="http://localhost:8080/ws-server/Cliente" />
-</beans>   
+	
+	<jaxws:client id="ClienteServ" serviceClass="pe.edu.upc.dsd.ws.Impl_ConsultarCliente"
+		address="http://10.11.8.226:8080/ServidorCliente/ClienteServ" />
+</beans>                                                                                 
