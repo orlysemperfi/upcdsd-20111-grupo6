@@ -7,7 +7,7 @@
 	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
 	
 
-	<bean id="ClienteServ" class="pe.edu.upc.dsd.ws.Impl_Cliente" />
+	<bean id="ClienteServ" class="pe.edu.upc.dsd.ws.Impl_ConsultarCliente" />
 	
 	<jaxws:endpoint id="ClienteServEndpoint" implementor="#ClienteServ"
 		address="/ClienteServ" />
