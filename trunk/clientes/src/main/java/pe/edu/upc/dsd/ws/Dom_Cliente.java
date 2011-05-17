@@ -1,6 +1,6 @@
 package pe.edu.upc.dsd.ws;
 
-public class Cliente0 {
+public class Dom_Cliente {
 	
 	private int codigo;
 	
