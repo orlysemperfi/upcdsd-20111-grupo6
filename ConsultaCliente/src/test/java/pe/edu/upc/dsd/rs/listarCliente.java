@@ -10,18 +10,16 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.junit.Test;
 
-public class consultarCliente {
+public class listarCliente {
 	@Test
 	public void test() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta/C0001");
+				"http://localhost:8080/rs-ServicioCliente/rest/cliente/listar/Junior");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				entity.getContent()));
-		Assert.assertEquals("Cliente encontrado", reader.readLine());
+		Assert.assertEquals("Hola junior", reader.readLine());
 	}
-	
-	
 }
