@@ -29,5 +29,25 @@ public class ClienteService {
 		
 		return gson.toJson(codigo); 
 	}
+	
+	/*@GET
+	@Path ("/cliente/{ciudad}")
+	@Produces("application/text")
+	public String getClienteCiudad (@PathParam("ciudad") String ciudad){
+		Gson gson = new Gson();
+		Cliente cliente = new Cliente();
+		cliente.setCodigo("C0001");
+		cliente.setNombre("Junior");
+		cliente.setApellido("Rufasto");
+		cliente.setCiudad("Lima");
+		cliente.setDistrito("Breña");
+		cliente.setDireccion("Av. Nueva York");
+		cliente.setDni("4904994");
+		cliente.setTelefono("99441514");
+		
+		
+		
+		return gson.toJson(ciudad); 
+	}*/
 
 }
