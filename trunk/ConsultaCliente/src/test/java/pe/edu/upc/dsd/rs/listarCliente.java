@@ -20,6 +20,6 @@ public class listarCliente {
 		HttpEntity entity = response.getEntity();
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				entity.getContent()));
-		Assert.assertEquals("Hola junior", reader.readLine());
+		Assert.assertEquals("\"Junior\"", reader.readLine());
 	}
 }
