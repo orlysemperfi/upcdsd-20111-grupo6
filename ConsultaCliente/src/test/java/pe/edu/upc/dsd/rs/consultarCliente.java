@@ -18,9 +18,11 @@ public class consultarCliente {
 				"http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta/C0001");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
+		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				entity.getContent()));
-		Assert.assertEquals("Cliente encontrado", reader.readLine());
+		Assert.assertEquals("\"C0001\"", reader.readLine());
+		System.out.println(reader.readLine());
 	}
 	
 	
