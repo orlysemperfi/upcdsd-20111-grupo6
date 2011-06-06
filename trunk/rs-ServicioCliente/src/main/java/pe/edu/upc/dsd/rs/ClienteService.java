@@ -38,7 +38,7 @@ public class ClienteService {
 		@Path("/listar/{nombre}") 
 		@Produces("text/plain") 
 		public String listar(@PathParam("nombre") String nombre) { 
-		        return "Bienvenido : " + nombre; 
+		        return nombre; 
 		} 
 	
 	/*@Path("/HelloWorld") 
