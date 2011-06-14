@@ -6,11 +6,15 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import com.google.gson.Gson;
+import org.apache.log4j.Logger;
+
+
 
 @Path ("/cliente")
 public class ClienteService {
 	
-	
+	private static final Logger logger = Logger
+	.getLogger(ClienteService.class);
 	/*@GET
 	@Path ("/cliente/{codigo}")
 	@Produces("application/json")*/
@@ -30,6 +34,8 @@ public class ClienteService {
 		cliente.setDireccion("Av. Nueva York");
 		cliente.setDni("4904994");
 		cliente.setTelefono("99441514");
+		//System.out.println("CLIENTE: C0001 ");
+		logger.debug("Cliente: " + codigo);
 		return gson.toJson(codigo); 
 	}
 
@@ -38,6 +44,7 @@ public class ClienteService {
 		@Path("/listar/{nombre}") 
 		@Produces("text/plain") 
 		public String listar(@PathParam("nombre") String nombre) { 
+			logger.debug("Lista Cliente: " + nombre);
 		        return nombre; 
 		} 
 	
