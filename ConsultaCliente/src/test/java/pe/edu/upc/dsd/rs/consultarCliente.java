@@ -22,7 +22,8 @@ public class consultarCliente {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				entity.getContent()));
 		Assert.assertEquals("\"C0001\"", reader.readLine());
-		System.out.println(reader.readLine());
+		//System.out.println(reader.readLine());
+		//System.out.println("CLIENTE: C0001 ");
 	}
 	
 	

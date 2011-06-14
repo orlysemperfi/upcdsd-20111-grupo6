@@ -9,7 +9,7 @@
 								.click(
 										function() {
 											$
-													.ajax({
+													.ajax({		
 														url : 'http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta/'
 																+ $("#codigo")
 																		.val(),
@@ -21,21 +21,8 @@
 															$("#apellido")
 																	.html(
 																			data.apellido);
-															$("#ciudad")
-																	.html(
-																	data.ciudad);
-															$("#distrito")
-																	.html(
-																	data.distrito);
-															$("#direccion")
-																	.html(
-																	data.direccion);
-															$("#dni")
-																	.html(
-																	data.dni);
-															$("#telefono")
-																	.html(
-																	data.telefono);
+															alert("entro"); 
+															
 														},
 														error : function(data) {
 															alert("Error");
@@ -48,15 +35,10 @@
 <body>
 	<p>
 		Codigo Cliente: <input id="codigo" type="text" />
-		<button>Consultar</button>
+		<button>Consultar</button><br />
 	
 		Nombre: <span id="nombre"></span><br /> Apellido: <span id="apellido"></span><br />
 	
-		ciudad: <span id="ciudad"></span><br /> distrito: <span id="distrito"></span><br />
-	
-		direccion: <span id="direccion"></span><br /> 
-	
-		dni: <span id="dni"></span><br /> telefono: <span id="telefono"></span><br />
 	</p>
 </body>
 </html>
