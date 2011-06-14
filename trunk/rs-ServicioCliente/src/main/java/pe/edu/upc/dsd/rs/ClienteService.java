@@ -21,24 +21,43 @@ public class ClienteService {
 	
 	
 	@GET 
-    @Path("/consulta/{codigo}") 
-    @Produces("application/json")//("text/plain") 
-	public String getCliente (@PathParam("codigo") String codigo){
+	    @Path("/consulta/{codigo}") 
+	    @Produces("application/json")//("text/plain") 
+		public String getCliente (@PathParam("codigo") String codigo){
+			Gson gson = new Gson();
+			Cliente cliente = new Cliente();
+			cliente.setCodigo("C0001");
+			cliente.setNombre("Junior");
+			cliente.setApellido("Rufasto");
+			cliente.setCiudad("Lima");
+			cliente.setDistrito("Breña");
+			cliente.setDireccion("Av. Nueva York");
+			cliente.setDni("4904994");
+			cliente.setTelefono("99441514");
+			//System.out.println("CLIENTE: C0001 ");
+			logger.debug("Cliente: " + codigo);
+			return gson.toJson(cliente); 
+		}
+	
+	@GET 
+    @Path("/consulta2/{nombre}/{apellido}/{ciudad}/{distrito}") 
+    @Produces("application/json")
+	public String getClientes (@PathParam("nombre") String nombre, @PathParam("apellido") String apellido, @PathParam("ciudad") String ciudad, @PathParam("distrito") String distrito){
 		Gson gson = new Gson();
 		Cliente cliente = new Cliente();
 		cliente.setCodigo("C0001");
 		cliente.setNombre("Junior");
 		cliente.setApellido("Rufasto");
 		cliente.setCiudad("Lima");
-		cliente.setDistrito("Breña");
+		cliente.setDistrito("Brena");
 		cliente.setDireccion("Av. Nueva York");
 		cliente.setDni("4904994");
 		cliente.setTelefono("99441514");
 		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Cliente: " + codigo);
-		return gson.toJson(codigo); 
+		logger.debug("Consulta Clientes: " + nombre);
+		return gson.toJson(cliente); 
 	}
-
+	
 
 		@GET 
 		@Path("/listar/{nombre}") 
