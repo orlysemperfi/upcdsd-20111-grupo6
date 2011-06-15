@@ -54,7 +54,7 @@ public class ClienteService {
 		cliente.setDni("4904994");
 		cliente.setTelefono("99441514");
 		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Consulta Clientes: " + nombre);
+		logger.debug("Consulta Clientes: " + nombre + " " + apellido + " " + ciudad + " " + distrito);
 		return gson.toJson(cliente); 
 	}
 	
