@@ -1,5 +1,8 @@
 package pe.edu.upc.dsd.rs;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "Cliente")
 public class Cliente {
 	
 	private String codigo;
@@ -10,6 +13,24 @@ public class Cliente {
 	private String direccion;
 	private String dni;
 	private String telefono;
+	
+	public Cliente(){}
+	
+	public Cliente(String codigo, String nombre, String apellido,
+			String ciudad, String distrito, String direccion, String dni,
+			String telefono) {
+		super();
+		this.codigo = codigo;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.ciudad = ciudad;
+		this.distrito = distrito;
+		this.direccion = direccion;
+		this.dni = dni;
+		this.telefono = telefono;
+	}
+
+	
 	public String getCodigo() {
 		return codigo;
 	}
@@ -59,6 +80,7 @@ public class Cliente {
 		this.telefono = telefono;
 	}
 	
+		
 	
 
 }

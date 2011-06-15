@@ -1,10 +1,11 @@
 package pe.edu.upc.dsd.rs;
-import javax.ws.rs.GET;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-
 import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 
@@ -56,6 +57,30 @@ public class ClienteService {
 		//System.out.println("CLIENTE: C0001 ");
 		logger.debug("Consulta Clientes: " + nombre + " " + apellido + " " + ciudad + " " + distrito);
 		return gson.toJson(cliente); 
+	}
+	
+	@GET 
+    @Path("/consulta3/{nombre}/{apellido}/{ciudad}/{distrito}") 
+    @Produces("application/json")
+	public List<Cliente> getListaClientes (@PathParam("nombre") String nombre, @PathParam("apellido") String apellido, @PathParam("ciudad") String ciudad, @PathParam("distrito") String distrito){
+		
+		List<Cliente> lista = new ArrayList<Cliente>();
+		Cliente cliente = new Cliente();
+		cliente.setCodigo("C0001");
+		cliente.setNombre("Junior");
+		cliente.setApellido("Rufasto");
+		cliente.setCiudad("Lima");
+		cliente.setDistrito("Brena");
+		cliente.setDireccion("Av. Nueva York");
+		cliente.setDni("4904994");
+		cliente.setTelefono("99441514");
+		lista.add(cliente);
+		lista.add(new Cliente("C0002", "Elvis", "Campos", "Lima", "comas", "Jr. Ciro Alegria 236", "3456789", "34567890987"));
+		lista.add(new Cliente("C0003", "Merlyn", "Enriquez", "Lima", "San Isidro", "Calle veintisiete", "3456789", "34567890987"));
+		lista.add(new Cliente("C0004", "Melissa", "Espinoza", "Lima", "Callao", "Bellavista", "3456789", "34567890987"));
+		//System.out.println("CLIENTE: C0001 ");
+		logger.debug("Consulta Clientes: " + lista.size());
+		return lista; 
 	}
 	
 
