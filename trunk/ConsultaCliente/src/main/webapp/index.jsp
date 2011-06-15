@@ -23,15 +23,19 @@ body,td,th {
 										function() {
 											$
 													.ajax({		
-														url : 'http://localhost:8086/rs-ServicioCliente/rest/cliente/consulta3/'+ $("#nombre").val()+"/"+ $("#apellido").val()+"/"+ $("#ciudad").val()+"/"+ $("#distrito").val(),
+														url : 'http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta3/'+ $("#nombre").val()+"/"+ $("#apellido").val()+"/"+ $("#ciudad").val()+"/"+ $("#distrito").val(),
 														type : 'GET',
 														dataType: "json",
 														success : function(data) {
 															
+															var tam = $('#tbLista >tbody >tr').length;
+															for( i = 0 ; i < tam ; i++){
+																document.getElementById('tbLista').deleteRow(2);												
+															}
+															
 															var n = $('tr:last td', $("#tbLista")).length;
 													 
 															$.each(data.Clientes, function(i,item){
-															     // $("<img/>").attr("src", item.media.m).appendTo("#images");
 															      
 															      var tds = '<tr>';
 																	for(var i = 0; i < n; i++){
@@ -63,10 +67,7 @@ body,td,th {
 																	}
 																	tds += '</tr>';
 																	$("#tbLista").append(tds);
-																	
-															    //  if ( i == 7 ){
-															    //	  return false;  
-															    //  } 
+															
 															});
 																														 
 															
@@ -121,6 +122,7 @@ body,td,th {
     <td colspan="2">
     
     <table width="1029" border="1" id="tbLista">
+    <thead>
       <tr>
         <td colspan="7	">&nbsp;</td>
       </tr>
@@ -133,7 +135,9 @@ body,td,th {
         <td width="70" bgcolor="#993300"><strong>Viajes por Mes</strong></td>        
         <td width="101" bgcolor="#993300"><strong>Detalle</strong></td>
       </tr>
-     
+      </thead>
+     <tbody>
+     </tbody>
     </table>
     
     
