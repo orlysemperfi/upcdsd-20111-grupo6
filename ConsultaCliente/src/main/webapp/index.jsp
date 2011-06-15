@@ -23,18 +23,20 @@ body,td,th {
 										function() {
 											$
 													.ajax({		
-														url : 'http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta2/'+ $("#nombre")+"/"+ $("#apellido")+"/"+ $("#ciudad")+"/"+ $("#distrito").val(),
+														url : 'http://localhost:8080/rs-ServicioCliente/rest/cliente/consulta2/'+ $("#nombre").val()+"/"+ $("#apellido").val()+"/"+ $("#ciudad").val()+"/"+ $("#distrito").val(),
 														type : 'GET',
 														dataType: "json",
 														success : function(data) {
+
 															$("#nombre").html(data.nombre);
 															$("#apellido").html(data.apellido);
-															$("#ciudad").html(ciudad);
-															$("#distrito").html(distrito);
+															$("#ciudad").html(data.ciudad);
+															$("#distrito").html(data.distrito);
 															
 															 alert("ha retornado a " + data.nombre + " / " + data.apellido);
 															
 														},
+
 														error : function(data) {
 															alert("Error");
 														}
@@ -44,13 +46,8 @@ body,td,th {
 </script>
 </head>
 <body>
-	<p>
-		
-		
+
 	
-		
-	
-	</p>
 	<table width="988" border="0">
   <tr>
     <td><h1>Consulta de Clientes</h1></td>
@@ -116,5 +113,6 @@ body,td,th {
   </tr>
 </table>
 	
+
 </body>
 </html>
