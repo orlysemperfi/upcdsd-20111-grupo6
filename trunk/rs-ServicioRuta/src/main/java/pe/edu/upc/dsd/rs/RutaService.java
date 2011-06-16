@@ -73,7 +73,7 @@ ruta.setAsientos("29");
     @Path("/consulta3/{destino}/{llegada}/{horasalida}") 
     @Produces("application/json")
 	public List<Ruta> getListaClientes (@PathParam("destino") String destino, @PathParam("llegada") String llegada, @PathParam("horasalida") String horasalida){
-		
+		logger.debug("Consultando...");
 		List<Ruta> lista = new ArrayList<Ruta>();
 		Ruta ruta = new Ruta();
 		ruta.setCodbus("B001");
@@ -90,9 +90,9 @@ ruta.setAsientos("29");
 		lista.add(ruta);
 		lista.add(new Ruta("B002", "R002", "Arequipa", "Lima", "19/04/2010", "19/04/2010", "19:00:00", "22:00:00" ,"Mario Perez", "19 Soles", "26"));
 		lista.add(new Ruta("B003", "R003", "Lima", "Arequipa", "20/04/2010", "22/04/2010", "21:00:00","06:00:00", "Mario Perez", "18 Soles", "25"));
-		lista.add(new Ruta("B004", "R004", "Cuzco", "Lima", "21/04/2010", "22/04/2010", "22:00:00", "03:00:00","Mario Perez", "16 Soles", "24"));
+		//lista.add(new Ruta("B004", "R004", "Cuzco", "Lima", "21/04/2010", "22/04/2010", "22:00:00", "03:00:00","Mario Perez", "16 Soles", "24"));
 		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Consulta Rutas: " + lista.size());
+		logger.debug("Consulta Rutas: " + lista.size() + " registros encontrados");
 		return lista; 
 	}
 	
