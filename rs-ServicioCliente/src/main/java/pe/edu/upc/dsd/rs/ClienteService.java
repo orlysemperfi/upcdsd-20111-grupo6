@@ -63,7 +63,7 @@ public class ClienteService {
     @Path("/consulta3/{nombre}/{apellido}/{ciudad}/{distrito}") 
     @Produces("application/json")
 	public List<Cliente> getListaClientes (@PathParam("nombre") String nombre, @PathParam("apellido") String apellido, @PathParam("ciudad") String ciudad, @PathParam("distrito") String distrito){
-		
+		logger.debug("Consultando...");
 		List<Cliente> lista = new ArrayList<Cliente>();
 		Cliente cliente = new Cliente();
 		cliente.setCodigo("C0001");
@@ -79,7 +79,7 @@ public class ClienteService {
 		lista.add(new Cliente("C0003", "Merlyn", "Enriquez", "Lima", "San Isidro", "Calle veintisiete", "3456789", "34567890987"));
 		lista.add(new Cliente("C0004", "Melissa", "Espinoza", "Lima", "Callao", "Bellavista", "3456789", "34567890987"));
 		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Consulta Clientes: " + lista.size());
+		logger.debug("Consulta Clientes: " + lista.size() + " registros");
 		return lista; 
 	}
 	
@@ -88,6 +88,7 @@ public class ClienteService {
     @Path("/registra/{codigo}/{nombre}/{apellido}/{ciudad}/{distrito}/{direccion}/{dni}/{telefono}") 
     @Produces("application/json")//("text/plain") 
 	public int getRegistraCliente (@PathParam("codigo") String codigo,@PathParam("nombre") String nombre, @PathParam("apellido") String apellido, @PathParam("ciudad") String ciudad, @PathParam("distrito") String distrito, @PathParam("direccion") String direccion, @PathParam("dni") String dni, @PathParam("telefono") String telefono){
+		logger.debug("Guardando...");
 		Gson gson = new Gson();
 		Cliente cliente = new Cliente();
 		cliente.setCodigo(codigo);
