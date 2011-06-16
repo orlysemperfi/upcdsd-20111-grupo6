@@ -79,7 +79,7 @@ public class ClienteService {
 		lista.add(new Cliente("C0003", "Merlyn", "Enriquez", "Lima", "San Isidro", "Calle veintisiete", "3456789", "34567890987"));
 		lista.add(new Cliente("C0004", "Melissa", "Espinoza", "Lima", "Callao", "Bellavista", "3456789", "34567890987"));
 		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Consulta Clientes: " + lista.size() + " registros");
+		logger.debug("Consulta Clientes: " + lista.size() + " registros encontrados");
 		return lista; 
 	}
 	
@@ -120,24 +120,7 @@ public class ClienteService {
 		        return nombre; 
 		} 
 	
-	/*@Path("/HelloWorld") 
-	public class HelloWorld { 
-	 
-	        @GET 
-	        @Path("/saludar") 
-	        @Produces("text/plain") 
-	        public String saludar() { 
-	                return "Hola mundo!!!"; 
-	        } 
-	 
-	        @GET 
-	        @Path("/saludar/{nombre}") 
-	        @Produces("text/plain") 
-	        public String saludar(@PathParam("nombre") String nombre) { 
-	                return "Hola " + nombre; 
-	        } 
-	 
-	} */
+	
 
 	
 
