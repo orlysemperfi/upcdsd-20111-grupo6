@@ -95,7 +95,7 @@ body,td,th {
 <body>
 <table width="988" border="0">
   <tr>
-    <td><h1>Consulta Ruta por Destinox</h1></td>
+    <td><h1>Consulta Ruta por Destino</h1></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
