@@ -1,8 +1,10 @@
 package pe.edu.upc.dsd.rs;
 
+
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "Cliente")
+@XmlRootElement(name = "Ruta")
+
 public class Ruta {
 	
 	private String codbus;
