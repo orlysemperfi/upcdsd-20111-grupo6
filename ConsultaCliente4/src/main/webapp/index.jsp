@@ -24,7 +24,7 @@ body,td,th {
 										function() {
 											$
 													.ajax({		
-														url : 'http://localhost:8080/rs-ServicioRutas/rest/ruta/consulta3/'+ $("#select1").val()+"/"+ $("#select2").val()+"/"+ $("#textfield1").val(),
+														url : 'http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta3/'+ $("#select1").val()+"/"+ $("#select2").val()+"/"+ $("#textfield1").val(),
 														type : 'GET',
 														dataType: "json",
 														success : function(data) {
@@ -36,7 +36,7 @@ body,td,th {
 															
 															var n = $('tr:last td', $("#tbLista")).length;
 													 
-															$.each(data.Clientes, function(i,item){
+															$.each(data.Rutas, function(i,item){
 															      
 															      var tds = '<tr>';
 																	for(var i = 0; i < n; i++){
@@ -63,18 +63,16 @@ body,td,th {
 																		    case 6:
 																		    	tds += '<td>'+item.codbus+'</td>';
 																		       break;
-																		    case 5:
+																		    case 7:
 																		    	tds += '<td>'+item.costo+'</td>';
 																		       break;
-																		    case 6:
+																		    case 8:
 																		    	tds += '<td>'+item.asientos+'</td>';
 																		       break;
-																		    case 5:
+																		    case 9:
 																		    	tds += '<td>...</td>';
 																		       break;
-																		    case 6:
-																		    	tds += '<td>...</td>';
-																		       break;
+																		    
 																		} 
 																	
 																	}
@@ -97,7 +95,7 @@ body,td,th {
 <body>
 <table width="988" border="0">
   <tr>
-    <td><h1>Consulta Ruta por Destino</h1></td>
+    <td><h1>Consulta Ruta por Destinox</h1></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -105,34 +103,35 @@ body,td,th {
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <td width="843" bgcolor="#CCCCCC" ><form id="form1" name="form1" method="post" action="">
+    <td width="843" bgcolor="#CCCCCC" >
 
   <label>Lugar salida
-        <select name="select1" id="select1">
+        <select name="destino" id="destino">
           <option value="Lima">Lima</option>
           <option value="Lima">Cuzco</option>
           <option value="Lima">Arequipa</option>
         </select>
       </label>
       <label>Lugar Llegada
-        <select name="select2" id="select2">
+        <select name="llegada" id="llegada">
           <option value="Lima">Lima</option>
           <option value="Lima">Cuzco</option>
           <option value="Lima">Arequipa</option>
         </select>
       </label>
         <label>Fecha Salida
-        <input type="text"  value="" name="textfield1" id="textfield1" />
+        <input type="text"  id="horasalida" />
       </label>
-    </form></td>
-    <td width="76"><form id="form2" name="form2" method="post" action="">
+    </td>
+    <td width="76">
       <label>
-        <input type="submit" name="button" id="button" value="Consultar" />
+        <button>Consultar</button>
       </label>
-    </form></td>
+    </td>
   </tr>
   <tr>
-    <td colspan="2"><table width="971" border="1">
+    <td colspan="2"><table width="971" border="1" id="tbLista">
+    <thead>
       <tr>
         <td colspan="10">&nbsp;</td>
         </tr>
@@ -148,7 +147,7 @@ body,td,th {
         <td width="87" bgcolor="#993300"><strong>Asientos Disponibles</strong></td>
         <td width="101" bgcolor="#993300"><strong>Detalle</strong></td>
       </tr>
-
+ </thead>
 <tbody>
      </tbody>
      
