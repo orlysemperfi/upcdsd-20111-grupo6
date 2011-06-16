@@ -83,6 +83,33 @@ public class ClienteService {
 		return lista; 
 	}
 	
+	
+	@GET 
+    @Path("/registra/{codigo}/{nombre}/{apellido}/{ciudad}/{distrito}/{direccion}/{dni}/{telefono}") 
+    @Produces("application/json")//("text/plain") 
+	public int getRegistraCliente (@PathParam("codigo") String codigo,@PathParam("nombre") String nombre, @PathParam("apellido") String apellido, @PathParam("ciudad") String ciudad, @PathParam("distrito") String distrito, @PathParam("direccion") String direccion, @PathParam("dni") String dni, @PathParam("telefono") String telefono){
+		Gson gson = new Gson();
+		Cliente cliente = new Cliente();
+		cliente.setCodigo(codigo);
+		cliente.setNombre(nombre);
+		cliente.setApellido(apellido);
+		cliente.setCiudad(ciudad);
+		cliente.setDistrito(distrito);
+		cliente.setDireccion(direccion);
+		cliente.setDni(dni);
+		cliente.setTelefono(telefono);
+		
+			try{   
+				logger.debug("Se guardó con éxito el cliente: " + codigo);
+				return 1;  
+			  }   
+			  catch(NumberFormatException ex){  
+				  logger.debug("No se pudo guardar el cliente, llene todos los datos");
+				  return 0;
+			      
+			  }   
+
+	}
 
 		@GET 
 		@Path("/listar/{nombre}") 
