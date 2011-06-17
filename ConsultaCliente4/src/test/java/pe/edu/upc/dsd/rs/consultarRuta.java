@@ -15,7 +15,7 @@ public class consultarRuta {
 	public void test() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta/Arequipa");
+				"http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta3/Lima/Arequipa/asdsad");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		
