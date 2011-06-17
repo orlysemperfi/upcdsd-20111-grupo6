@@ -82,7 +82,7 @@ body,td,th {
 															
 															});
 																														 
-														//	alert($("#salida").val());
+													//		alert($("#salida").val());
 														//	alert($("#llegada").val());
 														},
 
@@ -110,15 +110,15 @@ body,td,th {
   <label>Lugar salida
         <select name="salida" id="salida">
           <option value="Lima">Lima</option>
-          <option value="Lima">Cuzco</option>
-          <option value="Lima">Arequipa</option>
+          <option value="Cuzco">Cuzco</option>
+          <option value="Arequipa">Arequipa</option>
         </select>
       </label>
       <label>Lugar Llegada
         <select name="llegada" id="llegada">
           <option value="Lima">Lima</option>
-          <option value="Lima">Cuzco</option>
-          <option value="Lima">Arequipa</option>
+          <option value="Cuzco">Cuzco</option>
+          <option value="Arequipa">Arequipa</option>
         </select>
       </label>
         <label>Fecha Salida
