@@ -24,7 +24,8 @@ body,td,th {
 										function() {
 											$
 													.ajax({		
-														url : 'http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta3/'+ $("#select1").val()+"/"+ $("#select2").val()+"/"+ $("#textfield1").val(),
+														url : 'http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta3/'+ $("#salida").val()+"/"+ $("#llegada").val()+"/"+ $("#horasalida").val(),
+																								
 														type : 'GET',
 														dataType: "json",
 														success : function(data) {
@@ -81,7 +82,8 @@ body,td,th {
 															
 															});
 																														 
-															
+														//	alert($("#salida").val());
+														//	alert($("#llegada").val());
 														},
 
 														error : function(data) {
@@ -106,7 +108,7 @@ body,td,th {
     <td width="843" bgcolor="#CCCCCC" >
 
   <label>Lugar salida
-        <select name="destino" id="destino">
+        <select name="salida" id="salida">
           <option value="Lima">Lima</option>
           <option value="Lima">Cuzco</option>
           <option value="Lima">Arequipa</option>
@@ -120,7 +122,7 @@ body,td,th {
         </select>
       </label>
         <label>Fecha Salida
-        <input type="text"  id="horasalida" />
+        <input type="text"  id="horasalida"/>
       </label>
     </td>
     <td width="76">
