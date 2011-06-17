@@ -71,7 +71,7 @@ body,td,th {
 																		    	tds += '<td>'+item.asientos+'</td>';
 																		       break;
 																		    case 9:
-																		    	tds += '<td>...</td>';
+																		    	tds += ' <td><a href="http://localhost:8080/ConsultaCliente4/index2.jsp?id=32423">Ver Asientos</a></td> ';
 																		       break;
 																		    
 																		} 
