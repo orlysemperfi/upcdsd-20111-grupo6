@@ -15,14 +15,13 @@ public class consultarRuta {
 	public void test() throws Exception {
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpGet httpget = new HttpGet(
-				"http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta3/Lima/Arequipa/asdsad");
+				"http://localhost:8080/rs-ServicioRuta/rest/ruta/consulta/Arequipa");
 		HttpResponse response = httpclient.execute(httpget);
 		HttpEntity entity = response.getEntity();
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(
 				entity.getContent()));
-		Assert.assertEquals("\"B001\"", reader.readLine());
-
+		Assert.assertEquals("Arequipa", reader.readLine());
 
 	}
 	
