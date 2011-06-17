@@ -21,7 +21,7 @@ public class RutaService {
 	
 	@GET 
 	    @Path("/consulta/{destino}") 
-	    @Produces("application/json")//("text/plain") 
+	    @Produces("plain/text")//("text/plain") 
 		public String getCliente (@PathParam("destino") String destino){
 			Gson gson = new Gson();
 			Ruta ruta = new Ruta();
@@ -39,7 +39,7 @@ ruta.setCosto("13 Soles");
 ruta.setAsientos("29");
 
 			logger.debug("Destino: " + destino);
-			return gson.toJson(ruta); 
+			return destino; 
 		}
 	
 	
@@ -86,19 +86,19 @@ ruta.setAsientos("29");
 		Ruta ruta2 = new Ruta("B002", "R002", "Arequipa", "Lima", "19/04/2010", "19/04/2010", "19:00:00", "22:00:00" ,"Mario Perez", "19 Soles", "26");
 		Ruta ruta3=new Ruta("B003", "R003", "Lima", "Arequipa", "20/04/2010", "22/04/2010", "21:00:00","06:00:00", "Mario Perez", "18 Soles", "25");
 				
-		//		if (ruta2.getSalida().equals(salida) && ruta2.getLlegada().equals(llegada)){
-			//	lista.add(ruta2);}
-		//		if (ruta.getSalida().equals(salida) && ruta.getLlegada().equals(llegada)){
-		//			lista.add(ruta);}		
-	//			if (ruta3.getSalida().equals(salida) && ruta3.getLlegada().equals(llegada)){
-			//		lista.add(ruta3);}		
-				  //   if(ruta.getDestino().equals(destino)){
+		if (ruta2.getSalida().equals(salida) && ruta2.getLlegada().equals(llegada)){
+		lista.add(ruta2);}
+			if (ruta.getSalida().equals(salida) && ruta.getLlegada().equals(llegada)){
+				lista.add(ruta);}		
+			if (ruta3.getSalida().equals(salida) && ruta3.getLlegada().equals(llegada)){
+					lista.add(ruta3);}		
+		  //   if(ruta.getDestino().equals(destino)){
 		//		
 		
 		
-	lista.add(ruta);
-		lista.add(ruta2);
-		lista.add(ruta3);
+//	lista.add(ruta);
+	//	lista.add(ruta2);
+		//lista.add(ruta3);
 		
 		
 		//lista.add();
