@@ -16,9 +16,7 @@ public class RutaService {
 	
 	private static final Logger logger = Logger
 	.getLogger(RutaService.class);
-	/*@GET
-	@Path ("/cliente/{codigo}")
-	@Produces("application/json")*/
+
 	
 	
 	@GET 
@@ -40,7 +38,6 @@ ruta.setConductor("Mario Perez");
 ruta.setCosto("13 Soles");
 ruta.setAsientos("29");
 
-			//System.out.println("CLIENTE: C0001 ");
 			logger.debug("Destino: " + destino);
 			return gson.toJson(ruta); 
 		}
@@ -64,15 +61,14 @@ ruta.setAsientos("29");
 		ruta.setCosto("13 Soles");
 		ruta.setAsientos("29");
 
-		//System.out.println("CLIENTE: C0001 ");
 		logger.debug("Consulta Rutas: " + destino + " " + llegada + " " + horasalida );
 		return gson.toJson(ruta); 
 	}
 	
 	@GET 
-    @Path("/consulta3/{destino}/{llegada}/{horasalida}") 
+    @Path("/consulta3/{llegada}/{salida}/{horasalida}") 
     @Produces("application/json")
-	public List<Ruta> getListaClientes (@PathParam("destino") String destino, @PathParam("llegada") String llegada, @PathParam("horasalida") String horasalida){
+	public List<Ruta> getListaClientes (@PathParam("llegada") String llegada, @PathParam("salida") String salida, @PathParam("horasalida") String horasalida){
 		logger.debug("Consultando...");
 		List<Ruta> lista = new ArrayList<Ruta>();
 		Ruta ruta = new Ruta();
@@ -87,12 +83,29 @@ ruta.setAsientos("29");
 		ruta.setConductor("Mario Perez");
 		ruta.setCosto("13 Soles");
 		ruta.setAsientos("29");
-		lista.add(ruta);
-		lista.add(new Ruta("B002", "R002", "Arequipa", "Lima", "19/04/2010", "19/04/2010", "19:00:00", "22:00:00" ,"Mario Perez", "19 Soles", "26"));
-		lista.add(new Ruta("B003", "R003", "Lima", "Arequipa", "20/04/2010", "22/04/2010", "21:00:00","06:00:00", "Mario Perez", "18 Soles", "25"));
-		//lista.add(new Ruta("B004", "R004", "Cuzco", "Lima", "21/04/2010", "22/04/2010", "22:00:00", "03:00:00","Mario Perez", "16 Soles", "24"));
-		//System.out.println("CLIENTE: C0001 ");
-		logger.debug("Consulta Rutas: " + lista.size() + " registros encontrados");
+		Ruta ruta2 = new Ruta("B002", "R002", "Arequipa", "Lima", "19/04/2010", "19/04/2010", "19:00:00", "22:00:00" ,"Mario Perez", "19 Soles", "26");
+		Ruta ruta3=new Ruta("B003", "R003", "Lima", "Arequipa", "20/04/2010", "22/04/2010", "21:00:00","06:00:00", "Mario Perez", "18 Soles", "25");
+				
+		//		if (ruta2.getSalida().equals(salida) && ruta2.getLlegada().equals(llegada)){
+			//	lista.add(ruta2);}
+		//		if (ruta.getSalida().equals(salida) && ruta.getLlegada().equals(llegada)){
+		//			lista.add(ruta);}		
+	//			if (ruta3.getSalida().equals(salida) && ruta3.getLlegada().equals(llegada)){
+			//		lista.add(ruta3);}		
+				  //   if(ruta.getDestino().equals(destino)){
+		//		
+		
+		
+	lista.add(ruta);
+		lista.add(ruta2);
+		lista.add(ruta3);
+		
+		
+		//lista.add();
+	//	lista.add(new Ruta("B003", "R003", "Lima", "Arequipa", "20/04/2010", "22/04/2010", "21:00:00","06:00:00", "Mario Perez", "18 Soles", "25"));
+			
+		
+		logger.debug("Se encontraron: " + lista.size() + " rutas");
 		return lista; 
 	}
 	
