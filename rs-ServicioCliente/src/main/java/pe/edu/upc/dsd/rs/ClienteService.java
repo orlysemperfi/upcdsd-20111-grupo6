@@ -37,7 +37,7 @@ public class ClienteService {
 			cliente.setTelefono("99441514");
 			//System.out.println("CLIENTE: C0001 ");
 			logger.debug("Cliente: " + codigo);
-			return gson.toJson(cliente); 
+			return gson.toJson(codigo); 
 		}
 	
 	@GET 
